@@ -1,0 +1,66 @@
+.table-custom {
+    border: 2px solid #000;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-custom th,
+.table-custom td {
+    border: 2px solid #000;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.table-custom th {
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table-custom .badge-success {
+    background-color: #28a745 !important;
+}
+
+.table-custom .badge-danger {
+    background-color: #dc3545 !important;
+}
+
+.table-custom img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.table-custom .btn-sm {
+    padding: 5px 10px;
+    font-size: 0.875rem;
+}
+
+.category-name {
+    overflow-x: auto;       /* cuộn ngang */
+    white-space: nowrap;    /* không xuống dòng */
+    text-align: left;       /* dễ đọc */
+}
+
+/* Thanh cuộn gọn gàng */
+.category-name::-webkit-scrollbar {
+    height: 6px;
+}
+.category-name::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+/* Nút thao tác nằm ngang */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* khoảng cách giữa các nút */
+}
+
+.action-buttons form {
+    margin: 0; /* bỏ margin mặc định */
+}
