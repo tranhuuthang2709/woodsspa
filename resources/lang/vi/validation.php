@@ -1,6 +1,6 @@
 <?php
 
-return [
+return [    
     'required' => ':attribute là bắt buộc.',
     'email' => ':attribute phải là một email hợp lệ.',
     'date' => ':attribute phải là một ngày hợp lệ.',

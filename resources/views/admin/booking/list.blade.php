@@ -172,7 +172,79 @@
 
     {{-- PHÂN TRANG --}}
     <div class="mt-3">
-        {{ $bookings->appends(request()->query())->links() }}
+       <div class="mt-3 d-flex justify-content-center">
+            <ul class="pagination">
+
+                @if ($bookings->onFirstPage())
+                    <li class="page-item disabled">
+                        <span class="page-link">« Trước</span>
+                    </li>
+                @else
+                    <li class="page-item">
+                        <a class="page-link"
+                        href="{{ $bookings->appends(request()->query())->previousPageUrl() }}">
+                            « Trước
+                        </a>
+                    </li>
+                @endif
+
+                @php
+                    $current = $bookings->currentPage();
+                    $last = $bookings->lastPage();
+                @endphp
+
+                @if ($last <= 10)
+
+                    @for ($i = 1; $i <= $last; $i++)
+                        <li class="page-item {{ $current == $i ? 'active' : '' }}">
+                            <a class="page-link"
+                            href="{{ $bookings->appends(request()->query())->url($i) }}">
+                                {{ $i }}
+                            </a>
+                        </li>
+                    @endfor
+
+                @else
+
+                    @for ($i = 1; $i <= 3; $i++)
+                        <li class="page-item {{ $current == $i ? 'active' : '' }}">
+                            <a class="page-link"
+                            href="{{ $bookings->appends(request()->query())->url($i) }}">
+                                {{ $i }}
+                            </a>
+                        </li>
+                    @endfor
+
+                    <li class="page-item disabled">
+                        <span class="page-link">...</span>
+                    </li>
+
+                    @for ($i = $last - 2; $i <= $last; $i++)
+                        <li class="page-item {{ $current == $i ? 'active' : '' }}">
+                            <a class="page-link"
+                            href="{{ $bookings->appends(request()->query())->url($i) }}">
+                                {{ $i }}
+                            </a>
+                        </li>
+                    @endfor
+
+                @endif
+
+                @if ($bookings->hasMorePages())
+                    <li class="page-item">
+                        <a class="page-link"
+                        href="{{ $bookings->appends(request()->query())->nextPageUrl() }}">
+                            Sau »
+                        </a>
+                    </li>
+                @else
+                    <li class="page-item disabled">
+                        <span class="page-link">Sau »</span>
+                    </li>
+                @endif
+
+            </ul>
+        </div>
     </div>
 </div>
 

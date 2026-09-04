@@ -4,10 +4,9 @@ namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\SerializesModels;
 
-class BookingReceived extends Mailable implements ShouldQueue
+class BookingReceived extends Mailable
 {
     use Queueable, SerializesModels;
 

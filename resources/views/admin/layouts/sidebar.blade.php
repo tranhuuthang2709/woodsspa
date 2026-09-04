@@ -61,6 +61,11 @@
                   <p>Quản lý banner</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{route('admin.change-password')}}">
+                  <i class="fas fa-key"></i>
+                  <p>Đổi mật khẩu</p>
+                </a>
             </ul>
           </div>
         </div>

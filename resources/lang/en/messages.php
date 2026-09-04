@@ -67,6 +67,8 @@ return [
     'tieudecontact' => 'We are always ready to listen to you',
     'motacontact' => 'To help Woods Spa improve continuously and provide you with a more complete relaxing experience, please do not hesitate to contact our team and leave your questions or sincere feedback through the contact information. We are always ready to listen to you!',
     'chondichvu'=>'Choose a service',
+    'booking_success' => 'Booking successful! Our admin will contact you soon.',
+    'booking_failed' => 'Booking failed! Please check your information.',
 
 
 

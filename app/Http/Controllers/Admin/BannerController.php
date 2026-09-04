@@ -18,7 +18,7 @@ class BannerController extends Controller
     public function upload(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'image' => 'required|image|mimes:jpg,jpeg,png,webp',
         ]);
 
         $file = $request->file('image');

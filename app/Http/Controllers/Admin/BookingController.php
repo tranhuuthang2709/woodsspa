@@ -107,10 +107,10 @@ class BookingController extends Controller
                 'person_name' => $guest['name'], 
                 'note' => $guest['note'] ?? null,
             ]);
-        }
-        Mail::to(env('ADMIN_EMAIL'))->queue(new BookingReceived($data));
+                }
+        Mail::to(env('ADMIN_EMAIL'))->send(new BookingReceived($data));
 
-        return back()->with('success', 'Đặt lịch thành công! Admin sẽ liên hệ sớm.');
+        return back()->with('success', __('messages.booking_success'));
     }
 public function list(Request $request)
 {

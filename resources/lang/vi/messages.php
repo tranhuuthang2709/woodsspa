@@ -65,5 +65,7 @@ return [
     'tieudecontact'=>'Chúng tôi sẵn lòng lắng nghe bạn',
     'motacontact'=>'Để Woods Spa ngày một hoàn thiện và mang đến cho bạn một trải nghiệm thư giãn trọn vẹn hơn, xin đừng ngần ngại liên hệ đội ngũ của chúng tôi để để lại những câu hỏi, những phản hồi chân thành từ bạn qua thông tin liên hệ. Chúng tôi luôn sẵn lòng lắng nghe bạn!',
     'chondichvu'=>'Chọn dịch vụ',
+    'booking_success' => 'Đặt lịch thành công! Admin sẽ liên hệ với bạn sớm.',
+    'booking_failed' => 'Đặt lịch thất bại! Vui lòng kiểm tra lại thông tin.',
 
 ];

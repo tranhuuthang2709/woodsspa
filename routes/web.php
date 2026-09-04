@@ -66,4 +66,7 @@ Route::prefix('admin')
         Route::post('/banner/toggle/{id}', [BannerController::class, 'toggle'])->name('banner.toggle');
         Route::put('/banner/{id}/update', [BannerController::class, 'update'])->name('banner.update');
         Route::delete('/banner/delete/{id}', [BannerController::class, 'delete'])->name('banner.delete');
+        //change_password
+        Route::get('/change-password', [AdminAuthController::class, 'changePassword'])->name('change-password');
+        Route::post('/change-password', [AdminAuthController::class, 'updatePassword'])->name('change-password.update');
 });

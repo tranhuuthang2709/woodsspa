@@ -62,5 +62,7 @@ return [
     'tieudecontact' => '我们随时愿意倾听您的声音',
     'motacontact' => '为了让 Woods Spa 不断完善，带给您更完整的放松体验，请随时通过联系方式联系我们的团队，留下您的问题和真诚的反馈。我们始终乐意倾听您的声音！',
     'chondichvu'=>'选择服务',
+    'booking_success' => '预订成功！我们的管理员会尽快与您联系。',
+    'booking_failed' => '预订失败！请检查您的信息。',
 
 ];
